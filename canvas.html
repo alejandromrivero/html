@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        window.onload=function() {
+            var canvas = document.getElementById('outerspace');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = "rgba(o, 149, 197, 0.8)";
+                ctx.beginPath();
+                ctx.arc(320, 240, 200, 0, Math.PI*2, true);
+                ctx.closePath();
+                ctx.fill();
+            };
+        }
+    </script>
+</head>
+<body>
+<div>TODO write content</div>
+<canvas width="640" height="480" id="outerspace">
+    Sorry, your browser doesn't support canvas.
+</canvas>
+
+</body>
+</html>

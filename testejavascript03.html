@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JS</title>
+    <script>
+        var quebrada=false;
+        function mudaLampada(tipo) {
+            if (tipo==1){
+                arquivo="_imagens/lampada-acesa.jpg";
+            }
+            if (tipo==2){
+                arquivo="_imagens/lampada-apagada.jpg";
+            }
+            if (tipo==3){
+                arquivo="_imagens/lampada-quebrada.jpg";
+            }
+            if (!quebrada){
+                document.getElementById("luz").src= arquivo;
+                if (tipo==3){
+                    quebrada=true;
+                }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<h1>Acenda a lampada</h1>
+<p>As Lâmpadas Bulbo LED são perfeitas para substituir as lâmpadas comuns. As opções de lâmpadas na cor branco morno
+    combinam com ambientes mais confortáveis, pois dão um ar mais agradável e tranquilo ao ambiente. Já as opções
+    brancas são ótimas para ambientes que necessitam mais atenção e iluminação como cozinha, escritórios e banheiros.
+    Entre as vantagens das Lâmpadas Bulbo LED é que elas são ecologicamente corretas, ou seja, não possuem materiais
+    danosos para o meio ambiente, causando um menor impacto à natureza. Garanta agora uma iluminação com maior
+    eficiência e economia. Aproveite e ganhe 10% de desconto no boleto!</p>
+<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)"/>
+
+
+</body>
+</html>
